@@ -13,7 +13,7 @@ version = "0.1.0"
 
 if sys.argv[-1] == 'publish':
     try:
-        import flarg
+        import wheel
     except ImportError:
         raise ImportError("Fix: pip install wheel")
     os.system('python setup.py sdist bdist_wheel upload')
