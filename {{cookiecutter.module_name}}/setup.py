@@ -13,11 +13,15 @@ version = "0.1.0"
 
 if sys.argv[-1] == 'publish':
     os.system('python setup.py sdist upload')
+    os.system('python setup.py bdist_wheel upload')
     print("You probably want to also tag the version now:")
     print("  git tag -a %s -m 'version %s'" % (version, version))
     print("  git push --tags")
     sys.exit()
 
+
+readme = open('README.rst').read()
+history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 
 setup(
     name='{{ cookiecutter.module_name }}',
@@ -27,9 +31,6 @@ setup(
     author='{{ cookiecutter.full_name }}',
     author_email='{{ cookiecutter.email }}',
     url='https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.module_name }}',
-    packages=[
-        '{{ cookiecutter.module_name }}',
-    ],
     include_package_data=True,
     py_modules=['{{ cookiecutter.module_name }}'],
     install_requires=[
@@ -51,6 +52,10 @@ setup(
         'Programming Language :: Python :: 3.4',
     ],
     {% if cookiecutter.console_script_name != "" %}
-
+    entry_points={
+        'console_scripts': [
+            '{{ cookiecutter.console_script_name }} = {{ cookiecutter.module_name }}:main',
+        ]
+    },
     {% endif %}
 )
