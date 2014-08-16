@@ -25,8 +25,13 @@ history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 
 def get_requirements(filename):
     f = open(filename).read()
-    return [x.strip() for x in f.splitlines()]
-
+    reqs = [
+            # loop through list of requirements
+            x.strip() for x in f.splitlines()
+                # filter out comments and empty lines
+                if not x.strip().startswith('#')
+            ]
+    return reqs
 
 setup(
     name='{{ cookiecutter.module_name }}',
@@ -53,7 +58,7 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
-    ]
+    ],
 {% if cookiecutter.console_script_name != "" %}
     entry_points={
         'console_scripts': [

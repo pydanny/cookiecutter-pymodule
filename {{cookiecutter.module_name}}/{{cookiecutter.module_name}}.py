@@ -4,18 +4,15 @@ __author__ = '{{ cookiecutter.full_name }}'
 __email__ = '{{ cookiecutter.email }}'
 __version__ = '0.1.0'
 
-
 {% if cookiecutter.console_script_name != "" %}
 import click
 {% endif %}
-
 
 ######################################
 #
 # Your code goes here
 #
 ######################################
-
 
 {% if cookiecutter.console_script_name != "" %}
 @click.command()
