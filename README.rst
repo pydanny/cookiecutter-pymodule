@@ -59,8 +59,12 @@ going into the correct place, look for the following text::
 
 Once that's done we suggest you create a GitHub repo and put your new package there. Once it's properly secured there, write some tests in the `tests.py` module!
 
+Uploading to PyPI
+------------------
 
+::
 
+    python setup.py register
 
 
 
