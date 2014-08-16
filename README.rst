@@ -16,6 +16,9 @@ Planned Features
 * Tox_ testing: Setup to easily test for Python 2.6, 2.7, 3.3
 * README.rst for documentation (Sphinx is overkill for single )
 
+.. _click: http://click.pocoo.org/
+.. _pytest: http://pydanny.com/pytest-no-boilerplate-testing.html
+
 Usage
 -----
 
