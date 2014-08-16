@@ -1,5 +1,5 @@
 ===============================
-{{ cookiecutter.project_name }}
+{{ cookiecutter.module_name }}
 ===============================
 
 .. image:: https://badge.fury.io/py/{{ cookiecutter.module_name }}.png

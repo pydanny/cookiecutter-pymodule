@@ -23,6 +23,11 @@ if sys.argv[-1] == 'publish':
 readme = open('README.rst').read()
 history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 
+def get_requirements(filename):
+    f = open(filename).read()
+    return [x.strip() for x in f.splitlines()]
+
+
 setup(
     name='{{ cookiecutter.module_name }}',
     version=version,
@@ -33,8 +38,7 @@ setup(
     url='https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.module_name }}',
     include_package_data=True,
     py_modules=['{{ cookiecutter.module_name }}'],
-    install_requires=[
-    ],
+    install_requires=get_requirements('requirements.txt'),
     license="BSD",
     zip_safe=False,
     keywords='{{ cookiecutter.module_name }}',
@@ -45,17 +49,16 @@ setup(
         'License :: OSI Approved :: BSD License',
         'Natural Language :: English',
         'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
-    ],
-    {% if cookiecutter.console_script_name != "" %}
+    ]
+{% if cookiecutter.console_script_name != "" %}
     entry_points={
         'console_scripts': [
             '{{ cookiecutter.console_script_name }} = {{ cookiecutter.module_name }}:main',
         ]
     },
-    {% endif %}
+{% endif %}
 )

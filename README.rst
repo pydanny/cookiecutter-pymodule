@@ -41,7 +41,30 @@ Alright, time to cenerate a single module Python package!::
     cookiecutter https://github.com/pydanny/cookiecutter-pymodule.git
 
 You'll be prompted for some questions, answer them, and cookiecutter does a
-bunch of work for you
+bunch of work for you. Once it's done, enter the new package:
+
+.. code-block:: bash
+
+    cd <new-package-name>
+
+Now, add your code to the just-generated module. To make sure your code is
+going into the correct place, look for the following text::
+
+    ######################################
+    #
+    # Your code goes here
+    #
+    ######################################
+
+
+Once that's done we suggest you create a GitHub repo and put your new package there. Once it's properly secured there, write some tests in the `tests.py` module!
+
+
+
+
+
+
+
 
 Not Exactly What You Want?
 --------------------------
