@@ -5,9 +5,9 @@ __email__ = '{{ cookiecutter.email }}'
 __version__ = '0.1.0'
 
 
-{{ if console_script_name is not "" }}
+{% if cookiecutter.console_script_name != "" %}
 import click
-{{ endif }}
+{% endif %}
 
 
 ######################################
@@ -17,7 +17,7 @@ import click
 ######################################
 
 
-{{ if console_script_name is not "" }}
+{% if cookiecutter.console_script_name != "" %}
 @click.command()
 # See instructions at http://click.pocoo.org/
 # @click.option('--count', default=1, help='Number of greetings.')
@@ -31,4 +31,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-{{ endif }}
+{% endif %}

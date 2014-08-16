@@ -1,8 +1,9 @@
 {
     "module_name": "The name of the to-be-packaged model.",
     "full_name": "Daniel Greenfeld",
+    "email": "pydanny@gmail.com",
     "github_username": "pydanny",
     "short_description": "This package does X",
     "release_date": "2014-01-11",
-    "console_script_name": "",
+    "console_script_name": ""
 }

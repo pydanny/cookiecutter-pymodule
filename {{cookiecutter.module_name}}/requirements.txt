@@ -1,7 +1,10 @@
-{{ if console_script_name is not "" }}
+{% if cookiecutter.console_script_name != "" %}
 click
-{{ endif }}
+{% endif %}
 
 # For testing and development
 flake8
 pytest
+
+# For distribution
+wheel==0.23.0

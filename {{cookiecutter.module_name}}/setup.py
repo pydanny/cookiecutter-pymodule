@@ -50,4 +50,7 @@ setup(
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
     ],
+    {% if cookiecutter.console_script_name != "" %}
+
+    {% endif %}
 )
