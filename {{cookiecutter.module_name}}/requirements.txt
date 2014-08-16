@@ -1,2 +1,7 @@
+{{ if console_script_name is not "" }}
 click
+{{ endif }}
+
+# For testing and development
 flake8
+pytest
