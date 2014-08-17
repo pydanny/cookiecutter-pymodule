@@ -2,6 +2,10 @@
 cookiecutter-pymodule
 ======================
 
+.. image:: https://requires.io/github/pydanny/cookiecutter-pymodule/requirements.png?branch=master
+     :target: https://requires.io/github/pydanny/cookiecutter-pymodule/requirements/?branch=master
+     :alt: Requirements Status
+
 A cookiecutter_ template for a single module (file) Python package.
 
 .. _cookiecutter: https://github.com/audreyr/cookiecutter
