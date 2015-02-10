@@ -4,7 +4,6 @@
     "email": "pydanny@gmail.com",
     "github_username": "pydanny",
     "short_description": "This package does X",
-    "release_date": "2014-01-11",
-    "console_script_name": "",
-    "test_on_windows": "no"
+    "release_date": "2015-02-30",
+    "console_script_name": ""
 }
