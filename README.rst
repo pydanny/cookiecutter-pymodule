@@ -17,6 +17,7 @@ Planned Features
 * Optional shell entry point powered by click_.
 * Testing with pytest_
 * Travis-CI_: Ready for Travis Continuous Integration testing
+* Code Cov: Ready for Coverage display and analytics
 * Tox_ testing: Setup to easily test for Python 2.6, 2.7, 3.3
 * README.rst for documentation (Sphinx is overkill for single )
 

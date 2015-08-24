@@ -9,8 +9,17 @@ python:
   - "2.6"
   - "pypy"
 
+before_install:
+- pip install codecov
+
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
 install: pip install -r requirements.txt
 
 # command to run tests, e.g. python setup.py test
 script: python setup.py test
+
+# command to run tests using coverage, e.g. python setup.py test
+script: coverage run --source spam runtests.py
+
+after_success:
+  - codecov
