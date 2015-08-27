@@ -6,3 +6,4 @@ project_directory = os.path.realpath(os.path.curdir)
 
 if '{{cookiecutter.support_windows}}'.lower() != 'y':
     shutil.rmtree(os.path.join(project_directory, 'appveyor'))
+    os.remove(os.path.join(project_directory, 'appveyor.yml'))
