@@ -1,5 +1,5 @@
 {
-    "module_name": "The name of the to-be-packaged model.",
+    "module_name": "The name of the to-be-packaged module.",
     "full_name": "Daniel Greenfeld",
     "email": "pydanny@gmail.com",
     "github_username": "pydanny",
